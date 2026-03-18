@@ -31,6 +31,11 @@ void RegistDialog::on_get_code_btn_clicked()
     if(match)
     {
         //发送http验证码
+        QJsonObject json_obj;
+        json_obj["email"]=email;
+        HttpMgr::GetInstance()->PostHttpReq(QUrl(gata_url_prefix+"/get_varifycode"),
+                                            json_obj,ReqId::ID_GET_VARIFY_CODE,Modules::REGISTERMOD);
+
 
     }
     else{
@@ -71,7 +76,7 @@ void RegistDialog::initHttpHandlers()
         }
         auto email=jsonObj["email"].toString();
         showTip(tr("验证码已经发送到邮箱,注意查收"),true);
-        QDebug()<<"email is"<<email;
+        qDebug()<<"email is"<<email;
     });
 }
 

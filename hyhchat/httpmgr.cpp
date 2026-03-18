@@ -41,7 +41,7 @@ void HttpMgr::slot_http_finish(ReqId id, QString res, ErrCodes err, Modules mod)
 {
     if(mod==Modules::REGISTERMOD){
         //发送信号通知指定模块的http响应结束了
-        emit sig_reg_mod_finish(id,res,err)
+        emit sig_reg_mod_finish(id,res,err);
 
     }
 }

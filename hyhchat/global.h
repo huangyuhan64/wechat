@@ -9,6 +9,9 @@
 #include<mutex>
 #include<QByteArray>
 #include<QNetworkReply>
+#include<QJsonObject>
+#include<QDir>
+#include<QSettings>
 /******************************************************************************
  *
  * @brief     刷新qss
@@ -30,5 +33,9 @@ enum ErrCodes{
     ERR_JSON=1,//JSON解析失败
     ERR_NETWORK=2,//网络错误
 };
+
+extern QString gata_url_prefix;
+
+
 
 #endif // GLOBAL_H

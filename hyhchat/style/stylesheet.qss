@@ -1,0 +1,13 @@
+QDialog#LogibDialog,#RegistDialog{
+    background-color:rgb(255,255,255)
+}
+
+#user_lable,#passlable{
+    color:black;
+}
+#err_tip[state='normal']{
+    color:green;
+}
+#err_tip[state='err']{
+    color:red;
+}

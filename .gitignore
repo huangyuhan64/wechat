@@ -1,0 +1,13 @@
+# 客户端已有的忽略规则已经在 hyhchat/.gitignore 中
+# 服务端 VS 编译输出
+[Dd]ebug/
+[Rr]elease/
+*.exe
+*.obj
+*.pdb
+*.user
+*.suo
+*.sln.docstates
+
+# 其他
+.vs/

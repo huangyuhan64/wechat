@@ -5,7 +5,10 @@
 #include<memory>
 #include<iostream>
 #include <unordered_map>
-
+#include<atomic>
+#include<queue>
+#include<mutex>
+#include<condition_variable>
 #include <json/json.h>
 #include <json/value.h>
 #include <json/reader.h>
@@ -22,5 +25,3 @@ enum ErrorCodes {
     Error_Json = 1001,  //JsonΩ‚Œˆ¥ÌŒÛ
     RPCFailed = 1002,  //RPC«Î«Û¥ÌŒÛ
 };
-class ConfigMgr;
-extern ConfigMgr gCfgMgr;

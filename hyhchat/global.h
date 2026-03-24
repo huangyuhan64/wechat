@@ -28,13 +28,13 @@ enum Modules{
     REGISTERMOD=0,
 };
 
-enum ErrCodes{
+enum ErrorCodes{
     SUCCESS=0,
     ERR_JSON=1,//JSON解析失败
     ERR_NETWORK=2,//网络错误
 };
 
-extern QString gata_url_prefix;
+extern QString gate_url_prefix;
 
 
 

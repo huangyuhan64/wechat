@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
     QSettings settings (config_path,QSettings::IniFormat);
     QString gata_host=settings.value("GataServer/host").toString();
     QString gata_port=settings.value("GataServer/port").toString();
-    gata_url_prefix="http://"+gata_host+":"+gata_port;
+    gate_url_prefix="http://"+gata_host+":"+gata_port;
 
 
 

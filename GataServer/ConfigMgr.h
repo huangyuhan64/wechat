@@ -1,4 +1,5 @@
 #pragma once
+#include<boost/filesystem.hpp>
 #include"const.h"
 struct SectionInfo {
     SectionInfo() {}

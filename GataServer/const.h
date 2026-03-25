@@ -12,10 +12,11 @@
 #include <json/json.h>
 #include <json/value.h>
 #include <json/reader.h>
-
+#include"ConfigMgr.h"
 #include<boost/property_tree/ptree.hpp>
 #include<boost/property_tree/ini_parser.hpp>
 #include<sw/redis++/redis++.h>
+#include"Singleton.h"
 namespace beast = boost::beast;         // from <boost/beast.hpp>
 namespace http = beast::http;           // from <boost/beast/http.hpp>
 namespace net = boost::asio;            // from <boost/asio.hpp>

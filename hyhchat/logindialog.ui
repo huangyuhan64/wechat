@@ -30,7 +30,7 @@
     <widget class="QWidget" name="widget" native="true">
      <layout class="QVBoxLayout" name="verticalLayout_3">
       <item>
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="head_label">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
           <horstretch>1</horstretch>
@@ -39,21 +39,18 @@
         </property>
         <property name="minimumSize">
          <size>
-          <width>100</width>
+          <width>306</width>
           <height>216</height>
          </size>
         </property>
         <property name="maximumSize">
          <size>
-          <width>16777215</width>
+          <width>306</width>
           <height>216</height>
          </size>
         </property>
         <property name="text">
          <string/>
-        </property>
-        <property name="pixmap">
-         <pixmap resource="rc.qrc">:/res/loginpic.png</pixmap>
         </property>
         <property name="scaledContents">
          <bool>false</bool>
@@ -64,6 +61,13 @@
        </widget>
       </item>
      </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="err_tip">
+     <property name="text">
+      <string/>
+     </property>
     </widget>
    </item>
    <item>
@@ -84,7 +88,7 @@
       <number>0</number>
      </property>
      <item>
-      <widget class="QLabel" name="user_lable">
+      <widget class="QLabel" name="email_lb">
        <property name="minimumSize">
         <size>
          <width>50</width>
@@ -104,12 +108,12 @@
         </size>
        </property>
        <property name="text">
-        <string>用户：</string>
+        <string>邮箱：</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="user_edit">
+      <widget class="QLineEdit" name="email_edit">
        <property name="baseSize">
         <size>
          <width>0</width>
@@ -258,7 +262,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="forgetlable">
+      <widget class="ClickedLabel" name="forget_label">
        <property name="text">
         <string>忘记密码</string>
        </property>
@@ -268,8 +272,13 @@
    </item>
   </layout>
  </widget>
- <resources>
-  <include location="rc.qrc"/>
- </resources>
+ <customwidgets>
+  <customwidget>
+   <class>ClickedLabel</class>
+   <extends>QLabel</extends>
+   <header>clickedlabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
  <connections/>
 </ui>

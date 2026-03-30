@@ -10,25 +10,32 @@ CONFIG += c++17
 RC_ICONS = chat.ico
 DESTDIR = ./bin
 SOURCES += \
+    clickedlabel.cpp \
     global.cpp \
     httpmgr.cpp \
     logindialog.cpp \
     main.cpp \
     mainwindow.cpp \
-    registdialog.cpp
+    registdialog.cpp \
+    resetdialog.cpp \
+    timerbtn.cpp
 
 HEADERS += \
+    clickedlabel.h \
     global.h \
     httpmgr.h \
     logindialog.h \
     mainwindow.h \
     registdialog.h \
-    singleton.h
+    resetdialog.h \
+    singleton.h \
+    timerbtn.h
 
 FORMS += \
     logindialog.ui \
     mainwindow.ui \
-    registdialog.ui
+    registdialog.ui \
+    resetdialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

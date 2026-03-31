@@ -38,6 +38,7 @@ public slots:
 private slots:
     void on_regist_btn_clicked();
     void slot_login_mod_finish(ReqId id, QString res, ErrorCodes err);
+    void on_login_btn_clicked();
 };
 
 #endif // LOGINDIALOG_H

@@ -40,7 +40,7 @@ void LoginDialog::initHttpHandlers()
             return;
         }
         auto email = jsonObj["email"].toString();
-
+        showTip(tr("登录成功"), true);
         //发送信号通知tcpMgr发送长链接
         ServerInfo si;
         si.Uid = jsonObj["uid"].toInt();
@@ -212,3 +212,26 @@ void LoginDialog::DelTipErr(TipErr te)
 
     showTip(_tip_errs.first(), false);
 }
+
+void LoginDialog::on_login_btn_clicked()
+{
+    qDebug()<<"login btn clicked";
+    if(checkUserValid() == false){
+        return;
+    }
+
+    if(checkPwdValid() == false){
+        return ;
+    }
+
+    enableBtn(false);
+    auto email = ui->email_edit->text();
+    auto pwd = ui->pass_edit->text();
+    //发送http请求登录
+    QJsonObject json_obj;
+    json_obj["email"] = email;
+    json_obj["passwd"] = xorString(pwd);
+    HttpMgr::GetInstance()->PostHttpReq(QUrl(gate_url_prefix+"/user_login"),
+                                        json_obj, ReqId::ID_LOGIN_USER,Modules::LOGINMOD);
+}
+

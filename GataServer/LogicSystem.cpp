@@ -3,6 +3,7 @@
 #include"VerifyGrpcClient.h"
 #include"RedisMgr.h"
 #include"MysqlMgr.h"
+#include"StatusGrpcClient.h"
 //get
 void LogicSystem::RegGet(std::string url, HttpHandler handler)
 {

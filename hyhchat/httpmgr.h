@@ -10,14 +10,14 @@
 /******************************************************************************
  * @brief      http管理
  *****************************************************************************/
-class HttpMgr:public QObject,public Signleton<HttpMgr>,public std::enable_shared_from_this<HttpMgr>//crtp
+class HttpMgr:public QObject,public Singleton<HttpMgr>,public std::enable_shared_from_this<HttpMgr>//crtp
 {
     Q_OBJECT
 public:
     ~HttpMgr();
     void PostHttpReq(QUrl url,QJsonObject json,ReqId req_id,Modules mod);
 private:
-    friend class Signleton<HttpMgr>;
+    friend class Singleton<HttpMgr>;
     HttpMgr();
     QNetworkAccessManager _manager;
 

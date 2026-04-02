@@ -24,6 +24,7 @@ private slots:
 
     void on_cancle_btn_clicked();
 
+
 private:
     void initHttpHandlers();
     Ui::RegistDialog *ui;

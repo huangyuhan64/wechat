@@ -32,6 +32,7 @@ signals:
     void sig_send_data(ReqId reqId, QString data);
     void sig_swich_chatdlg();
     void sig_login_failed(int);
+
 };
 
 

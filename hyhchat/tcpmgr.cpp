@@ -1,7 +1,7 @@
 #include "tcpmgr.h"
 #include<QAbstractSocket>
 #include<QJsonDocument>
-
+#include"usermgr.h"
 
 TcpMgr::TcpMgr():_host(""),_port(0),_b_recv_pending(false),_message_id(0),_message_len(0)
 {
@@ -156,6 +156,9 @@ void TcpMgr::initHandlers()
         // if (jsonObj.contains("friend_list")) {
         //     UserMgr::GetInstance()->AppendFriendList(jsonObj["friend_list"].toArray());
         // }
+        UserMgr::GetInstance()->SetUid(jsonObj["uid"].toInt());
+        UserMgr::GetInstance()->SetName(jsonObj["name"].toString());
+        UserMgr::GetInstance()->SetToken(jsonObj["token"].toString());
 
         emit sig_swich_chatdlg();
     });

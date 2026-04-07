@@ -1,4 +1,4 @@
-QT       += core gui network
+QT       += core gui network svg
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -11,10 +11,16 @@ RC_ICONS = chat.ico
 DESTDIR = ./bin
 SOURCES += \
     chatdialog.cpp \
+    chatpage.cpp \
+    chatuserlist.cpp \
+    chatuserwid.cpp \
     clickedbtn.cpp \
     clickedlabel.cpp \
+    customizeedit.cpp \
     global.cpp \
     httpmgr.cpp \
+    listitembase.cpp \
+    loadingdlg.cpp \
     logindialog.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -26,10 +32,16 @@ SOURCES += \
 
 HEADERS += \
     chatdialog.h \
+    chatpage.h \
+    chatuserlist.h \
+    chatuserwid.h \
     clickedbtn.h \
     clickedlabel.h \
+    customizeedit.h \
     global.h \
     httpmgr.h \
+    listitembase.h \
+    loadingdlg.h \
     logindialog.h \
     mainwindow.h \
     registdialog.h \
@@ -41,6 +53,9 @@ HEADERS += \
 
 FORMS += \
     chatdialog.ui \
+    chatpage.ui \
+    chatuserwid.ui \
+    loadingdlg.ui \
     logindialog.ui \
     mainwindow.ui \
     registdialog.ui \

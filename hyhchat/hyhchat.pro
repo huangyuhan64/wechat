@@ -10,10 +10,14 @@ CONFIG += c++17
 RC_ICONS = chat.ico
 DESTDIR = ./bin
 SOURCES += \
+    adduseritem.cpp \
+    bubbleframe.cpp \
     chatdialog.cpp \
+    chatitembase.cpp \
     chatpage.cpp \
     chatuserlist.cpp \
     chatuserwid.cpp \
+    chatview.cpp \
     clickedbtn.cpp \
     clickedlabel.cpp \
     customizeedit.cpp \
@@ -24,17 +28,27 @@ SOURCES += \
     logindialog.cpp \
     main.cpp \
     mainwindow.cpp \
+    messagetextedit.cpp \
+    picturebubble.cpp \
     registdialog.cpp \
     resetdialog.cpp \
+    searchlist.cpp \
+    statewidget.cpp \
     tcpmgr.cpp \
+    textbubble.cpp \
     timerbtn.cpp \
+    userdata.cpp \
     usermgr.cpp
 
 HEADERS += \
+    adduseritem.h \
+    bubbleframe.h \
     chatdialog.h \
+    chatitembase.h \
     chatpage.h \
     chatuserlist.h \
     chatuserwid.h \
+    chatview.h \
     clickedbtn.h \
     clickedlabel.h \
     customizeedit.h \
@@ -44,14 +58,21 @@ HEADERS += \
     loadingdlg.h \
     logindialog.h \
     mainwindow.h \
+    messagetextedit.h \
+    picturebubble.h \
     registdialog.h \
     resetdialog.h \
+    searchlist.h \
     singleton.h \
+    statewidget.h \
     tcpmgr.h \
+    textbubble.h \
     timerbtn.h \
+    userdata.h \
     usermgr.h
 
 FORMS += \
+    adduseritem.ui \
     chatdialog.ui \
     chatpage.ui \
     chatuserwid.ui \

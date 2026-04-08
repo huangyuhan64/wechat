@@ -3,6 +3,8 @@
 
 #include <QDialog>
 #include "global.h"
+#include "statewidget.h"
+#include<QList>
 namespace Ui {
 class ChatDialog;
 }
@@ -16,14 +18,21 @@ public:
     ~ChatDialog();
 
     void addChatUserList();
+    void ClearLabelState(StateWidget *lb);
 private:
+    void AddLBGroup(StateWidget *lb);
     void ShowSearch(bool bsearch=false);
+
     Ui::ChatDialog *ui;
     ChatUIMode _mode;
     ChatUIMode _state;
     bool _b_loading;
+    QList<StateWidget*>_lb_list;
 private slots:
     void slot_loading_chat_user();
+    void slot_side_chat();
+    void slot_side_contact();
+    void slot_text_changed(const QString &str);
 };
 
 #endif // CHATDIALOG_H

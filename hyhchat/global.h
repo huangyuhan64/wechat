@@ -108,5 +108,10 @@ struct MsgInfo{
     QString content;//表示文件和图像的url,文本信息
     QPixmap pixmap;//文件和图片的缩略图
 };
+const int MIN_APPLY_LABEL_ED_LEN = 40;
+
+const QString add_prefix = "添加标签 ";
+
+const int  tip_offset = 5;
 
 #endif // GLOBAL_H

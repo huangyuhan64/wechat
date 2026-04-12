@@ -83,28 +83,7 @@ ChatDialog::~ChatDialog()
 
 
 
-std::vector<QString>  strs ={"hello world !",
-                             "nice to meet u",
-                             "New year，new life",
-                             "You have to love yourself",
-                             "My love is written in the wind ever since the whole world is you"};
-std::vector<QString> heads = {
-    ":/res/head_1.png",
-    ":/res/head_2.png",
-    ":/res/head_3.png",
-    ":/res/head_4.png",
-    ":/res/head_5.png"
-};
-std::vector<QString> names = {
-    "llfc",
-    "zack",
-    "golang",
-    "cpp",
-    "java",
-    "nodejs",
-    "python",
-    "rust"
-};
+
 void ChatDialog::addChatUserList()
 {
     // 创建QListWidgetItem，并设置自定义的widget

@@ -21,6 +21,7 @@ public:
     bool LPop(const std::string& key, std::string& value);
     bool RPush(const std::string& key, const std::string& value);
     bool RPop(const std::string& key, std::string& value);
+    bool HDel(const std::string& key, const std::string& field);
     bool HSet(const std::string& key, const std::string& hkey, const std::string& value);
     std::string HGet(const std::string& key, const std::string& hkey);
     // 其他方法可类似添加...

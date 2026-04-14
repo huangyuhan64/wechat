@@ -20,9 +20,18 @@ bool MysqlMgr::CheckPwd(const std::string& email, const std::string& pwd, UserIn
     
 }
 
+bool MysqlMgr::AddFriendApply(const int& from, const int& to)
+{
+    return _dao.AddFriendApply(from, to);
+}
+
 std::shared_ptr<UserInfo> MysqlMgr::GetUser(int uid)
 {
     return _dao.GetUser(uid);
+}
+std::shared_ptr<UserInfo> MysqlMgr::GetUser(std::string name)
+{
+    return _dao.GetUser(name);
 }
 MysqlMgr::MysqlMgr() {
 }

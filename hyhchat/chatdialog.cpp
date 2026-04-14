@@ -73,6 +73,7 @@ ChatDialog::ChatDialog(QWidget *parent)
     this->installEventFilter(this);
 
     ui->side_chat_lb->SetSelected(true);
+    ui->search_list->SetSearchEdit(ui->search_edit);
 }
 
 ChatDialog::~ChatDialog()

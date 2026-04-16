@@ -1,6 +1,7 @@
 #include "chatuserwid.h"
 #include "ui_chatuserwid.h"
 #include<QApplication>
+#include<QPixmap>
 ChatUserWid::ChatUserWid(QWidget *parent) :
     ListItemBase(parent),
     ui(new Ui::ChatUserWid)
@@ -12,26 +13,24 @@ ChatUserWid::~ChatUserWid()
 {
     delete ui;
 }
-void ChatUserWid::SetInfo(QString name, QString head, QString msg)
+
+void ChatUserWid::SetInfo(std::shared_ptr<UserInfo> user_info)
 {
-    _name = name;
-    _head = head;
-    _msg = msg;
-    // 加载图片
-    QPixmap pixmap(_head);
-    QSize logicSize =ui->icon_lb->size();
-    qreal dpr=qApp->devicePixelRatio();
-    QSize physicalSize =logicSize*dpr;
-    QPixmap scaledPix=pixmap.scaled(physicalSize,Qt::KeepAspectRatio,Qt::SmoothTransformation);
-    scaledPix.setDevicePixelRatio(dpr);
-    ui->icon_lb->setPixmap(scaledPix);
-    ui->icon_lb->setScaledContents(false);
+    _user_info=user_info;
 
-    QFontMetrics fontMetrics(ui->user_name_lb->font());
-    QString nameText = fontMetrics.elidedText(_name, Qt::ElideRight, ui->user_name_lb->width());
-    QFontMetrics fontMetricsl(ui->user_chat_lb->font());   // 注意：变量名末尾是字母 l
-    QString msgText = fontMetricsl.elidedText(_msg, Qt::ElideRight, ui->user_chat_lb->width());
+    QPixmap pixmap(_user_info->_icon);
+    // 设置图片自动缩放
+    ui->icon_lb->setPixmap(pixmap.scaled(ui->icon_lb->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->icon_lb->setScaledContents(true);
 
-    ui->user_name_lb->setText(nameText);
-    ui->user_chat_lb->setText(msgText);
+    ui->user_name_lb->setText(_user_info->_name);
+    ui->user_chat_lb->setText(_user_info->_last_msg);
+
+
 }
+
+std::shared_ptr<UserInfo> ChatUserWid::GetUserInfo()
+{
+    return _user_info;
+}
+

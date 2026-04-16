@@ -276,7 +276,7 @@ public:
         label->setText(QCoreApplication::translate("ApplyFriend", "\345\217\221\351\200\201\346\267\273\345\212\240\346\234\213\345\217\213\347\224\263\350\257\267\357\274\232", nullptr));
         label_2->setText(QCoreApplication::translate("ApplyFriend", "\345\244\207\346\263\250\345\220\215\357\274\232", nullptr));
         label_3->setText(QCoreApplication::translate("ApplyFriend", "\346\240\207\347\255\276", nullptr));
-        tip_lb->setText(QCoreApplication::translate("ApplyFriend", "TextLabel", nullptr));
+        tip_lb->setText(QString());
         more_lb->setText(QString());
         sure_btn->setText(QCoreApplication::translate("ApplyFriend", "\347\241\256\350\256\244", nullptr));
         cancel_btn->setText(QCoreApplication::translate("ApplyFriend", "\345\217\226\346\266\210", nullptr));

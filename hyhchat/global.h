@@ -137,4 +137,6 @@ inline std::vector<QString> names = {
     "python",
     "rust"
 };
+
+const int CHAT_COUNT_PER_PAGE = 13;
 #endif // GLOBAL_H

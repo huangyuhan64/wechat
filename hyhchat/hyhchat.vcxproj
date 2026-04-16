@@ -218,6 +218,7 @@
     <ClCompile Include="applyfrienditem.cpp" />
     <ClCompile Include="applyfriendlist.cpp" />
     <ClCompile Include="applyfriendpage.cpp" />
+    <ClCompile Include="authenfriend.cpp" />
     <ClCompile Include="bubbleframe.cpp" />
     <ClCompile Include="chatdialog.cpp" />
     <ClCompile Include="chatitembase.cpp" />
@@ -264,6 +265,8 @@
     <QtMoc Include="applyfriendlist.h">
     </QtMoc>
     <QtMoc Include="applyfriendpage.h">
+    </QtMoc>
+    <QtMoc Include="authenfriend.h">
     </QtMoc>
     <QtMoc Include="bubbleframe.h">
     </QtMoc>
@@ -358,6 +361,8 @@
     <QtUic Include="applyfrienditem.ui">
     </QtUic>
     <QtUic Include="applyfriendpage.ui">
+    </QtUic>
+    <QtUic Include="authenfriend.ui">
     </QtUic>
     <QtUic Include="chatdialog.ui">
     </QtUic>

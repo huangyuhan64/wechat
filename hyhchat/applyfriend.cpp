@@ -17,7 +17,7 @@ ApplyFriend::ApplyFriend(QWidget *parent) :
     setWindowFlags(windowFlags() | Qt::FramelessWindowHint);
     this->setObjectName("ApplyFriend");
     this->setModal(true);
-    ui->name_ed->setPlaceholderText(tr("黄语晗"));
+
     ui->lb_ed->setPlaceholderText("搜索、添加标签");
     ui->back_ed->setPlaceholderText("燃烧的胸毛");
 

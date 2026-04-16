@@ -290,7 +290,7 @@
                 <item>
                  <widget class="ClickedOnceLabel" name="tip_lb">
                   <property name="text">
-                   <string>TextLabel</string>
+                   <string/>
                   </property>
                  </widget>
                 </item>

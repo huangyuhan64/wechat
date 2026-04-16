@@ -22,7 +22,6 @@
         <file>res/smile_hover.png</file>
         <file>res/filedir_press.png</file>
         <file>res/smile_press.png</file>
-        <file>res/red_point.png</file>
         <file>res/chat_icon.png</file>
         <file>res/chat_icon_hover.png</file>
         <file>res/chat_icon_press.png</file>
@@ -37,5 +36,6 @@
         <file>res/arowdown.png</file>
         <file>res/tipclose.png</file>
         <file>res/add_friend.png</file>
+        <file>res/red_point.png</file>
     </qresource>
 </RCC>
